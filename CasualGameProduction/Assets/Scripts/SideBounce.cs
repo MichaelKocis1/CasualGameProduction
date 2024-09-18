@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SideBounce : MonoBehaviour
 {
-    // This function adds a small force to the player's ball
+    // This script adds a small force to the player's ball
     // in the event that it lands directly on top of a peg.
     // This is done to avoid the ball getting stuck on top of the peg.
 

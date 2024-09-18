@@ -1,15 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Pop : MonoBehaviour
 {
-    public static int points = 0;
+    private VirusRemaining virusRemaining;
 
+    void Start() {
+        GameObject virusTextObject = GameObject.FindWithTag("virusText");
 
-    private void OnCollisionEnter3D(Collision2D other)
+        if (virusTextObject != null) {
+            virusRemaining = virusTextObject.GetComponent<VirusRemaining>();
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
     {
-        points += 10;
-        gameObject.SetActive(false);
+        if (collision.collider.tag == "Player") {
+            virusRemaining.ChangeVirus(-1);
+            gameObject.SetActive(false);
+        }
     }
 }

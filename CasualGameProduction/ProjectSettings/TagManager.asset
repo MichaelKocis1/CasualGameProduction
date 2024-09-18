@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Clean
   - Virus
+  - ballsText
+  - virusText
   layers:
   - Default
   - TransparentFX
