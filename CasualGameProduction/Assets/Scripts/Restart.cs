@@ -9,6 +9,9 @@ public class Restart : MonoBehaviour
     private BallsRemaining ballsRemaining;
     private VirusRemaining virusRemaining;
 
+    GameObject[] ballsOnScreen;
+    public int numBallsOnScreen;
+
     void Start() {
         GameObject ballsTextObject = GameObject.FindWithTag("ballsText");
         GameObject virusTextObject = GameObject.FindWithTag("virusText");
@@ -24,11 +27,22 @@ public class Restart : MonoBehaviour
 
     void Update()
     {
-        // If game is over, start timer
-        //Debug.Log(ballsRemaining.getNumBallsRemaining());
-
-        if (virusRemaining.getNumVirusRemaining() == 0 || ballsRemaining.getNumBallsRemaining() == 0) {
+        // If all Virus pegs are removed, restart
+        if (virusRemaining.getNumVirusRemaining() == 0) {
             StartCoroutine(WaitTime());
+        }
+
+        // If no more balls are remaining...
+        if (ballsRemaining.getNumBallsRemaining() == 0)
+        {
+            // check how many balls are left on screen. If none, then restart
+            ballsOnScreen = GameObject.FindGameObjectsWithTag("Player");
+            numBallsOnScreen = ballsOnScreen.Length;
+
+            if (numBallsOnScreen == 0)
+            {
+                StartCoroutine(WaitTime());
+            }
         }
     }
 

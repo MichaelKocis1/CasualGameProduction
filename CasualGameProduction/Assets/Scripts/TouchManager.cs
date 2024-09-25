@@ -45,8 +45,10 @@ public class TouchManager : MonoBehaviour
             Vector3 screenPos = new Vector3(screenPosition.x, screenPosition.y, depth);
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPos);
 
-            Instantiate(player, worldPosition, Quaternion.identity);
-            ballsRemaining.ChangeBalls(-1);
+            if (ballsRemaining.getNumBallsRemaining() > 0) {
+                Instantiate(player, worldPosition, Quaternion.identity);
+                ballsRemaining.ChangeBalls(-1);
+            }
 
             Debug.Log("Screen Position: " + screenPosition.x + ", " + screenPosition.y);
             Debug.Log("World Position: " + worldPosition.x + ", " + worldPosition.y); 
