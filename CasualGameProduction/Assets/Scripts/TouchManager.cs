@@ -41,7 +41,6 @@ public class TouchManager : MonoBehaviour
         Vector2 screenPosition = touchPositionAction.ReadValue<Vector2>();
 
         if (mainCamera != null) {
-            
             depth = mainCamera.transform.position.x;
             Vector3 screenPos = new Vector3(screenPosition.x, screenPosition.y, depth);
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPos);

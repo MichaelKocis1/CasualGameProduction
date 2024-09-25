@@ -19,7 +19,8 @@ public class BallController : MonoBehaviour
     void Update()
     {
         if (transform.position.y < -5.0) {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
 }
