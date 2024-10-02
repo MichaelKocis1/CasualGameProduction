@@ -38,20 +38,40 @@ public class TouchManager : MonoBehaviour
     }
 
     private void TouchPressed(InputAction.CallbackContext context) {
-        Vector2 screenPosition = touchPositionAction.ReadValue<Vector2>();
-
         if (mainCamera != null) {
+            Vector2 screenPos2D = touchPositionAction.ReadValue<Vector2>();
             depth = mainCamera.transform.position.x;
-            Vector3 screenPos = new Vector3(screenPosition.x, screenPosition.y, depth);
-            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPos);
+            Vector3 screenPos3D = new Vector3(screenPos2D.x, screenPos2D.y, depth);
+            Vector3 worldPos = mainCamera.ScreenToWorldPoint(screenPos3D);
+
+            /*
+            if (above designated height) {
+                move position of syringe launcher only along z axis
+            } else if (in stomach range) {
+                - rotate syringe to face that point
+                - make sure its only in box and cant go up or out of designated area
+                    - if out of designated area stop line and process
+                - create a dotted line moving toward touch point in zone 
+                    - make that line have a max length so that it can't go infinitely
+                    - scale line image in size to show strength of shot
+                - when released, spawn ball with a force in direction of release point
+                    - distance to release point determines strength of force
+                - remove line
+            }
+            */
 
             if (ballsRemaining.getNumBallsRemaining() > 0) {
-                Instantiate(player, worldPosition, Quaternion.identity);
+                Instantiate(player, worldPos, Quaternion.identity);
                 ballsRemaining.ChangeBalls(-1);
             }
 
-            Debug.Log("Screen Position: " + screenPosition.x + ", " + screenPosition.y);
-            Debug.Log("World Position: " + worldPosition.x + ", " + worldPosition.y); 
+            Debug.Log("Screen Position: " + screenPos3D.x + ", " + screenPos3D.y);
+            Debug.Log("World Position: " + worldPos.x + ", " + worldPos.y);
         }
     }
+
+    private void spawnBall() {
+
+    }
 }
+
