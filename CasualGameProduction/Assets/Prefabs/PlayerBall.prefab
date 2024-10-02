@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 234512145578821882}
   - component: {fileID: 7888406273860230182}
   - component: {fileID: 3427778388768283928}
-  - component: {fileID: 3164702090572282239}
   - component: {fileID: 1773371046975138308}
   m_Layer: 0
   m_Name: PlayerBall
@@ -31,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5084356389073005123}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 18.06, z: -0.23}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -135,18 +134,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 2
   m_CollisionDetection: 1
---- !u!114 &3164702090572282239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5084356389073005123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 346ebfdfc8d46574087b2513f2e5b2c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1773371046975138308
 MonoBehaviour:
   m_ObjectHideFlags: 0
