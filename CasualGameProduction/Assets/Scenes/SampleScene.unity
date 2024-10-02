@@ -295,13 +295,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8266731393263835360, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
       propertyPath: m_Name
-      value: VirusCylinder (4)
+      value: VirusPeg (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+--- !u!1 &173807166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 173807167}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &173807167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173807166}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1086283458}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &260275541 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 881926051409031217, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
@@ -556,10 +587,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.31975612, y: -0, z: -0, w: 0.94749993}
   m_LocalPosition: {x: 0, y: 0.94, z: 7}
-  m_LocalScale: {x: 1, y: 1, z: 8.8695}
+  m_LocalScale: {x: 1, y: 1, z: 8.869501}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 598954838}
   m_LocalEulerAnglesHint: {x: -37.296, y: 0, z: 0}
 --- !u!1001 &474261349
 PrefabInstance:
@@ -611,13 +642,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 452277438294136550, guid: d1ea6dd4b395fb74396f2b697240e3a4, type: 3}
       propertyPath: m_Name
-      value: CleanCylinder (2)
+      value: CleanPeg (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ea6dd4b395fb74396f2b697240e3a4, type: 3}
+--- !u!1 &598954837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598954838}
+  m_Layer: 0
+  m_Name: StomachWalls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &598954838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598954837}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1689078741}
+  - {fileID: 1122614704}
+  - {fileID: 339691926}
+  - {fileID: 1043178994}
+  - {fileID: 1000884068}
+  - {fileID: 2086398331}
+  - {fileID: 1868891571}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &682946880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3071411009246518320, guid: 3effeb5a0ab30f24d950775e9d7aefee, type: 3}
@@ -633,7 +702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 684350507}
   m_Layer: 0
-  m_Name: CleanCylinders
+  m_Name: CleanPegs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -842,7 +911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 910531447}
   m_Layer: 0
-  m_Name: VirusCylinders
+  m_Name: VirusPegs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1010,7 +1079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 452277438294136550, guid: d1ea6dd4b395fb74396f2b697240e3a4, type: 3}
       propertyPath: m_Name
-      value: CleanCylinder (3)
+      value: CleanPeg (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1031,7 +1100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3396586348832068627, guid: 479d90fa33771c448ae7cfdb1d09caee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.2
+      value: 22.7
       objectReference: {fileID: 0}
     - target: {fileID: 3396586348832068627, guid: 479d90fa33771c448ae7cfdb1d09caee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1174,10 +1243,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.22359093, y: -0, z: -0, w: 0.9746831}
   m_LocalPosition: {x: 0, y: 13, z: -11.04}
-  m_LocalScale: {x: 1, y: 1, z: 8.8695}
+  m_LocalScale: {x: 1, y: 1, z: 8.869501}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 598954838}
   m_LocalEulerAnglesHint: {x: 25.84, y: 0, z: 0}
 --- !u!1 &1002733216
 GameObject:
@@ -1436,7 +1505,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 8.8695}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 598954838}
   m_LocalEulerAnglesHint: {x: 40.231, y: 0, z: 0}
 --- !u!1 &1086283454
 GameObject:
@@ -1451,7 +1520,7 @@ GameObject:
   - component: {fileID: 1086283456}
   - component: {fileID: 1086283455}
   m_Layer: 0
-  m_Name: Launcher
+  m_Name: SyringeLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1539,10 +1608,11 @@ Transform:
   m_GameObject: {fileID: 1086283454}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 25.6, z: -0.23}
+  m_LocalPosition: {x: 0, y: 25, z: -0.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 173807167}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1122614700
@@ -1648,7 +1718,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 8.8695}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 598954838}
   m_LocalEulerAnglesHint: {x: -66.759, y: 0, z: 0}
 --- !u!4 &1138947314 stripped
 Transform:
@@ -1867,7 +1937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8266731393263835360, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
       propertyPath: m_Name
-      value: VirusCylinder (2)
+      value: VirusPeg (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2012,7 +2082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 452277438294136550, guid: d1ea6dd4b395fb74396f2b697240e3a4, type: 3}
       propertyPath: m_Name
-      value: CleanCylinder (6)
+      value: CleanPeg (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2069,7 +2139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8266731393263835360, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
       propertyPath: m_Name
-      value: VirusCylinder (3)
+      value: VirusPeg (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2174,12 +2244,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689078737}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.63594353, y: 0, z: 0, w: 0.7717356}
+  m_LocalRotation: {x: -0.63594353, y: -0, z: -0, w: 0.7717356}
   m_LocalPosition: {x: 0, y: 14.6, z: 12.83}
   m_LocalScale: {x: 1, y: 1, z: 14.570815}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 598954838}
   m_LocalEulerAnglesHint: {x: -78.98, y: 0, z: 0}
 --- !u!1001 &1693451377
 PrefabInstance:
@@ -2231,7 +2301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 452277438294136550, guid: d1ea6dd4b395fb74396f2b697240e3a4, type: 3}
       propertyPath: m_Name
-      value: CleanCylinder (1)
+      value: CleanPeg (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2391,7 +2461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 452277438294136550, guid: d1ea6dd4b395fb74396f2b697240e3a4, type: 3}
       propertyPath: m_Name
-      value: CleanCylinder (4)
+      value: CleanPeg (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2470,7 +2540,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5084356389073005123, guid: 479d90fa33771c448ae7cfdb1d09caee, type: 3}
   mainCamera: {fileID: 963194227}
-  depth: 0
+  camDepth: 0
+  syringe: {fileID: 1086283454}
+  spawnPoint: {fileID: 173807166}
+  spawnBarrierLine: 0
 --- !u!114 &1845439551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2510,7 +2583,7 @@ Transform:
   m_GameObject: {fileID: 1845439549}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9019983, y: 18.22, z: -7.87}
+  m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2629,10 +2702,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.67403036, y: -0, z: -0, w: 0.7387037}
   m_LocalPosition: {x: 0, y: 17.09, z: -3.05}
-  m_LocalScale: {x: 1, y: 1, z: 5.731471}
+  m_LocalScale: {x: 1, y: 1, z: 5.7314706}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 598954838}
   m_LocalEulerAnglesHint: {x: -84.758, y: 0, z: 0}
 --- !u!1001 &1942448092
 PrefabInstance:
@@ -2684,7 +2757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8266731393263835360, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
       propertyPath: m_Name
-      value: VirusCylinder (1)
+      value: VirusPeg (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2741,7 +2814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 452277438294136550, guid: d1ea6dd4b395fb74396f2b697240e3a4, type: 3}
       propertyPath: m_Name
-      value: CleanCylinder (5)
+      value: CleanPeg (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2851,12 +2924,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086398327}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.33495837, y: -0, z: -0, w: 0.9422329}
+  m_LocalRotation: {x: -0.3349584, y: -0, z: -0, w: 0.94223297}
   m_LocalPosition: {x: 0, y: 12.79, z: -5.35}
   m_LocalScale: {x: 1, y: 1, z: 5.731471}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 598954838}
   m_LocalEulerAnglesHint: {x: -39.14, y: 0, z: 0}
 --- !u!1001 &3949395198902365476
 PrefabInstance:
@@ -2965,7 +3038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8266731393263835360, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
       propertyPath: m_Name
-      value: VirusCylinder
+      value: VirusPeg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3022,7 +3095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 452277438294136550, guid: d1ea6dd4b395fb74396f2b697240e3a4, type: 3}
       propertyPath: m_Name
-      value: CleanCylinder
+      value: CleanPeg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3039,16 +3112,10 @@ SceneRoots:
   - {fileID: 1584745884}
   - {fileID: 1845439552}
   - {fileID: 1240508587}
+  - {fileID: 598954838}
   - {fileID: 161569205}
   - {fileID: 684350507}
   - {fileID: 910531447}
   - {fileID: 1782707068}
   - {fileID: 1086283458}
   - {fileID: 997964684}
-  - {fileID: 1689078741}
-  - {fileID: 1122614704}
-  - {fileID: 339691926}
-  - {fileID: 1043178994}
-  - {fileID: 1000884068}
-  - {fileID: 2086398331}
-  - {fileID: 1868891571}

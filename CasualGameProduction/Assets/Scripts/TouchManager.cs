@@ -10,9 +10,16 @@ public class TouchManager : MonoBehaviour
     private InputAction touchPositionAction;
     private InputAction touchPressAction;
 
-    public float depth;
+    Vector2 screenPos2D;
+    Vector3 screenPos3D;
+    Vector3 worldPos;
+    public float camDepth;
     
     private BallsRemaining ballsRemaining;
+
+    public GameObject syringe;
+    public GameObject spawnPoint;
+    public float spawnBarrierLine;
 
 
     private void Awake() {
@@ -27,6 +34,8 @@ public class TouchManager : MonoBehaviour
         if (ballsTextObject != null) {
             ballsRemaining = ballsTextObject.GetComponent<BallsRemaining>();
         }
+
+        spawnBarrierLine = spawnPoint.transform.position.y;
     }
 
     private void OnEnable() {
@@ -39,10 +48,10 @@ public class TouchManager : MonoBehaviour
 
     private void TouchPressed(InputAction.CallbackContext context) {
         if (mainCamera != null) {
-            Vector2 screenPos2D = touchPositionAction.ReadValue<Vector2>();
-            depth = mainCamera.transform.position.x;
-            Vector3 screenPos3D = new Vector3(screenPos2D.x, screenPos2D.y, depth);
-            Vector3 worldPos = mainCamera.ScreenToWorldPoint(screenPos3D);
+            screenPos2D = touchPositionAction.ReadValue<Vector2>();
+            camDepth = mainCamera.transform.position.x;
+            screenPos3D = new Vector3(screenPos2D.x, screenPos2D.y, camDepth);
+            worldPos = mainCamera.ScreenToWorldPoint(screenPos3D);
 
             /*
             if (above designated height) {
@@ -59,19 +68,27 @@ public class TouchManager : MonoBehaviour
                 - remove line
             }
             */
-
-            if (ballsRemaining.getNumBallsRemaining() > 0) {
-                Instantiate(player, worldPos, Quaternion.identity);
-                ballsRemaining.ChangeBalls(-1);
+            if (worldPos.y > spawnBarrierLine)
+            {
+                syringe.transform.position = new Vector3(syringe.transform.position.x, syringe.transform.position.y, worldPos.z);
+                // would be touching on the syringe to move it.
+                // Will more clearly define these zones later
+            } else
+            {
+                spawnBall();
             }
-
-            Debug.Log("Screen Position: " + screenPos3D.x + ", " + screenPos3D.y);
-            Debug.Log("World Position: " + worldPos.x + ", " + worldPos.y);
         }
     }
 
     private void spawnBall() {
+        if (ballsRemaining.getNumBallsRemaining() > 0)
+        {
+            Instantiate(player, worldPos, Quaternion.identity);
+            ballsRemaining.ChangeBalls(-1);
+        }
 
+        Debug.Log("Screen Position: " + screenPos3D.x + ", " + screenPos3D.y);
+        Debug.Log("World Position: " + worldPos.z + ", " + worldPos.y);
     }
 }
 

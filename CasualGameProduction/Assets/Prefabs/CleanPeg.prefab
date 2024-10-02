@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2457255516647112442}
   - component: {fileID: 6837102926967483363}
   m_Layer: 0
-  m_Name: CleanCylinder
+  m_Name: CleanPeg
   m_TagString: Clean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
