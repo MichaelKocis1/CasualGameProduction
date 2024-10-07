@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 850048895474259625}
   - component: {fileID: 7006850806470243499}
   m_Layer: 0
-  m_Name: VirusCylinder
+  m_Name: VirusPeg
   m_TagString: Virus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
