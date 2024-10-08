@@ -2346,6 +2346,7 @@ GameObject:
   - component: {fileID: 1845439551}
   - component: {fileID: 1845439550}
   - component: {fileID: 1845439553}
+  - component: {fileID: 1845439554}
   m_Layer: 0
   m_Name: TouchManager
   m_TagString: Untagged
@@ -2426,6 +2427,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numBallsOnScreen: 0
+--- !u!114 &1845439554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845439549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d7aa39f123b44f7ac1de6fe3dcebf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1868891567
 GameObject:
   m_ObjectHideFlags: 0
