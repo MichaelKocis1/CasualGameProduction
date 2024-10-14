@@ -19,7 +19,6 @@ public class Pop : MonoBehaviour
     {
         if (collision.collider.tag == "Player") {
             virusRemaining.ChangeVirus(-1);
-            //gameObject.SetActive(false);
             Destroy(this.gameObject);
         }
     }
