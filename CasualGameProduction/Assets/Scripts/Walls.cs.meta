@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: a59eeac6aa00e450195813560572f1a8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bounceClip: {fileID: 8300000, guid: bc1cacc0be73d4b50add55dbe4c7ffad, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
