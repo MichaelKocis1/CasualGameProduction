@@ -10,10 +10,22 @@ public class Walls : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) 
         {
-            // Play a rand sound when ball collides with wall
-            if (bounceSoundClips.Length > 0)
+            // Ensure bounceSoundClips is not null and has elements
+            if (bounceSoundClips != null && bounceSoundClips.Length > 0)
             {
-                SoundFXManager.instance.PlayRandomSoundFXClip(bounceSoundClips, transform, 1f);
+                // Ensure SoundFXManager.instance is not null
+                if (SoundFXManager.instance != null)
+                {
+                    SoundFXManager.instance.PlayRandomSoundFXClip(bounceSoundClips, transform, 1f);
+                }
+                else
+                {
+                    Debug.LogError("SoundFXManager instance is null!");
+                }
+            }
+            else
+            {
+                Debug.LogError("bounceSoundClips is not assigned or empty!");
             }
         }
     }

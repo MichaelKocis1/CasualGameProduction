@@ -245,6 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79cca8b3b0f9a36409cf36d11a57b6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killZoneClips:
+  - {fileID: 8300000, guid: dbdc824aed166466cb0753f511806b1a, type: 3}
 --- !u!1001 &171746200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -468,6 +470,7 @@ GameObject:
   - component: {fileID: 339691925}
   - component: {fileID: 339691924}
   - component: {fileID: 339691923}
+  - component: {fileID: 339691927}
   m_Layer: 0
   m_Name: StomachWall (2)
   m_TagString: Untagged
@@ -561,6 +564,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -37.296, y: 0, z: 0}
+--- !u!114 &339691927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339691922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59eeac6aa00e450195813560572f1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSoundClips:
+  - {fileID: 8300000, guid: d496900c602bf4b0487c9824348c767e, type: 3}
+  - {fileID: 8300000, guid: bc1cacc0be73d4b50add55dbe4c7ffad, type: 3}
+  - {fileID: 8300000, guid: e9ef502654e624e26bf0fb77e71dab2e, type: 3}
+--- !u!1 &354777463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 354777465}
+  - component: {fileID: 354777464}
+  m_Layer: 0
+  m_Name: SoundFxManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &354777464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354777463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54802b89f50504e6fab9824fe5cca462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFXObject: {fileID: 1136182389816634205, guid: 9d384f15b64484169b3d8adf426fd731, type: 3}
+--- !u!4 &354777465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354777463}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.09006454, y: 6.7565145, z: 3.9113464}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &474261349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -828,6 +892,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5777341325061915149, guid: 3effeb5a0ab30f24d950775e9d7aefee, type: 3}
+      propertyPath: killZoneClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777341325061915149, guid: 3effeb5a0ab30f24d950775e9d7aefee, type: 3}
+      propertyPath: killZoneClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: dbdc824aed166466cb0753f511806b1a, type: 3}
     - target: {fileID: 8174025188548975003, guid: 3effeb5a0ab30f24d950775e9d7aefee, type: 3}
       propertyPath: m_Name
       value: KillZoneBlock (1)
@@ -1100,6 +1172,7 @@ GameObject:
   - component: {fileID: 1000884067}
   - component: {fileID: 1000884066}
   - component: {fileID: 1000884065}
+  - component: {fileID: 1000884069}
   m_Layer: 0
   m_Name: StomachWall (4)
   m_TagString: Untagged
@@ -1193,6 +1266,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 25.84, y: 0, z: 0}
+--- !u!114 &1000884069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000884064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59eeac6aa00e450195813560572f1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSoundClips:
+  - {fileID: 8300000, guid: d496900c602bf4b0487c9824348c767e, type: 3}
+  - {fileID: 8300000, guid: bc1cacc0be73d4b50add55dbe4c7ffad, type: 3}
+  - {fileID: 8300000, guid: e9ef502654e624e26bf0fb77e71dab2e, type: 3}
 --- !u!1 &1002733216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,6 +1448,7 @@ GameObject:
   - component: {fileID: 1043178993}
   - component: {fileID: 1043178992}
   - component: {fileID: 1043178991}
+  - component: {fileID: 1043178995}
   m_Layer: 0
   m_Name: StomachWall (3)
   m_TagString: Untagged
@@ -1452,6 +1542,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 40.231, y: 0, z: 0}
+--- !u!114 &1043178995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043178990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59eeac6aa00e450195813560572f1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSoundClips:
+  - {fileID: 8300000, guid: d496900c602bf4b0487c9824348c767e, type: 3}
+  - {fileID: 8300000, guid: bc1cacc0be73d4b50add55dbe4c7ffad, type: 3}
+  - {fileID: 8300000, guid: e9ef502654e624e26bf0fb77e71dab2e, type: 3}
 --- !u!1 &1122614700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1570,7 @@ GameObject:
   - component: {fileID: 1122614703}
   - component: {fileID: 1122614702}
   - component: {fileID: 1122614701}
+  - component: {fileID: 1122614705}
   m_Layer: 0
   m_Name: StomachWall (1)
   m_TagString: Untagged
@@ -1557,6 +1664,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -66.759, y: 0, z: 0}
+--- !u!114 &1122614705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122614700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59eeac6aa00e450195813560572f1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSoundClips:
+  - {fileID: 8300000, guid: d496900c602bf4b0487c9824348c767e, type: 3}
+  - {fileID: 8300000, guid: bc1cacc0be73d4b50add55dbe4c7ffad, type: 3}
+  - {fileID: 8300000, guid: e9ef502654e624e26bf0fb77e71dab2e, type: 3}
 --- !u!4 &1138947314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 881926051409031217, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
@@ -1610,6 +1733,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5777341325061915149, guid: 3effeb5a0ab30f24d950775e9d7aefee, type: 3}
+      propertyPath: killZoneClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777341325061915149, guid: 3effeb5a0ab30f24d950775e9d7aefee, type: 3}
+      propertyPath: killZoneClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: dbdc824aed166466cb0753f511806b1a, type: 3}
     - target: {fileID: 8174025188548975003, guid: 3effeb5a0ab30f24d950775e9d7aefee, type: 3}
       propertyPath: m_Name
       value: KillZoneBlock (2)
@@ -1995,6 +2126,7 @@ GameObject:
   - component: {fileID: 1689078740}
   - component: {fileID: 1689078739}
   - component: {fileID: 1689078738}
+  - component: {fileID: 1689078742}
   m_Layer: 0
   m_Name: StomachWall
   m_TagString: Untagged
@@ -2088,6 +2220,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -78.98, y: 0, z: 0}
+--- !u!114 &1689078742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689078737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59eeac6aa00e450195813560572f1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSoundClips:
+  - {fileID: 8300000, guid: d496900c602bf4b0487c9824348c767e, type: 3}
+  - {fileID: 8300000, guid: bc1cacc0be73d4b50add55dbe4c7ffad, type: 3}
+  - {fileID: 8300000, guid: e9ef502654e624e26bf0fb77e71dab2e, type: 3}
 --- !u!1001 &1693451377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2314,6 +2462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1782707068}
+  - component: {fileID: 1782707069}
   m_Layer: 0
   m_Name: KillZones
   m_TagString: Untagged
@@ -2339,6 +2488,20 @@ Transform:
   - {fileID: 682946880}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1782707069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782707067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cca8b3b0f9a36409cf36d11a57b6fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killZoneClips:
+  - {fileID: 8300000, guid: dbdc824aed166466cb0753f511806b1a, type: 3}
 --- !u!4 &1798579034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 881926051409031217, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
@@ -2464,6 +2627,7 @@ GameObject:
   - component: {fileID: 1868891570}
   - component: {fileID: 1868891569}
   - component: {fileID: 1868891568}
+  - component: {fileID: 1868891572}
   m_Layer: 0
   m_Name: StomachWall (6)
   m_TagString: Untagged
@@ -2557,6 +2721,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -84.758, y: 0, z: 0}
+--- !u!114 &1868891572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868891567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59eeac6aa00e450195813560572f1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSoundClips:
+  - {fileID: 8300000, guid: d496900c602bf4b0487c9824348c767e, type: 3}
+  - {fileID: 8300000, guid: bc1cacc0be73d4b50add55dbe4c7ffad, type: 3}
+  - {fileID: 8300000, guid: e9ef502654e624e26bf0fb77e71dab2e, type: 3}
 --- !u!1001 &1942448092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2688,6 +2868,7 @@ GameObject:
   - component: {fileID: 2086398330}
   - component: {fileID: 2086398329}
   - component: {fileID: 2086398328}
+  - component: {fileID: 2086398332}
   m_Layer: 0
   m_Name: StomachWall (5)
   m_TagString: Untagged
@@ -2781,6 +2962,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -39.14, y: 0, z: 0}
+--- !u!114 &2086398332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086398327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59eeac6aa00e450195813560572f1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSoundClips:
+  - {fileID: 8300000, guid: d496900c602bf4b0487c9824348c767e, type: 3}
+  - {fileID: 8300000, guid: bc1cacc0be73d4b50add55dbe4c7ffad, type: 3}
+  - {fileID: 8300000, guid: e9ef502654e624e26bf0fb77e71dab2e, type: 3}
 --- !u!1001 &3100884591837448918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2886,6 +3083,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5777341325061915149, guid: 3effeb5a0ab30f24d950775e9d7aefee, type: 3}
+      propertyPath: killZoneClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777341325061915149, guid: 3effeb5a0ab30f24d950775e9d7aefee, type: 3}
+      propertyPath: killZoneClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: dbdc824aed166466cb0753f511806b1a, type: 3}
     - target: {fileID: 8174025188548975003, guid: 3effeb5a0ab30f24d950775e9d7aefee, type: 3}
       propertyPath: m_Name
       value: KillZoneBlock
@@ -3090,3 +3295,4 @@ SceneRoots:
   - {fileID: 1868891571}
   - {fileID: 5481097814369518769}
   - {fileID: 3100884591837448918}
+  - {fileID: 354777465}
