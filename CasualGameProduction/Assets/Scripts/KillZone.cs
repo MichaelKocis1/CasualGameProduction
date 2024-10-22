@@ -11,7 +11,6 @@ public class KillZone : MonoBehaviour
         {
             Destroy(other.gameObject);
             SoundFXManager.instance.PlayRandomSoundFXClip(killZoneClips, transform, 0.2f);
-
         }
     }
 }
