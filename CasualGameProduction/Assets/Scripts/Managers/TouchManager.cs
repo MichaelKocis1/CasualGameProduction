@@ -17,8 +17,7 @@ public class TouchManager : MonoBehaviour
 
     private BallsRemaining ballsRemaining;
 
-    public GameObject syringe;
-    public GameObject spawnPoint;
+    public GameObject syringeSpawnPoint;
     public float spawnBarrierLine;
 
     private void Awake() {
@@ -34,7 +33,7 @@ public class TouchManager : MonoBehaviour
             ballsRemaining = ballsTextObject.GetComponent<BallsRemaining>();
         }
 
-        spawnBarrierLine = spawnPoint.transform.position.y;
+        spawnBarrierLine = syringeSpawnPoint.transform.position.y;
     }
 
     private void OnEnable() {
@@ -71,7 +70,7 @@ public class TouchManager : MonoBehaviour
 
             if (worldPos.y > spawnBarrierLine)
             {
-                syringe.transform.position = new Vector3(syringe.transform.position.x, syringe.transform.position.y, worldPos.z);
+                syringeSpawnPoint.transform.position = new Vector3(syringeSpawnPoint.transform.position.x, syringeSpawnPoint.transform.position.y, worldPos.z);
                 // would be touching on the syringe to move it.
                 // Will more clearly define these zones later
             }
@@ -85,8 +84,18 @@ public class TouchManager : MonoBehaviour
     private void spawnBall() {
         if (ballsRemaining.getNumBallsRemaining() > 0)
         {
-            //Instantiate(player, worldPos, Quaternion.identity);
-            Instantiate(player, new Vector3(0, spawnPoint.transform.position.y, spawnPoint.transform.position.z), Quaternion.identity);
+            // Spawns projectile at tip of syringe
+            GameObject instantiatedObj = GameObject.Instantiate(player, new Vector3(0, syringeSpawnPoint.transform.position.y, syringeSpawnPoint.transform.position.z), Quaternion.identity);
+
+            // Calculates aim direction from projectile to touch position
+            Vector3 aimDirection = instantiatedObj.transform.position - worldPos;
+            aimDirection = new Vector3(0, aimDirection.y * -2, aimDirection.z * -2);
+
+            // Rotate syringe in aim direction
+            //syringeSpawnPoint.transform.rotation = Quaternion.Euler((180 / Mathf.PI * Mathf.Tan(aimDirection.z / aimDirection.y) + 270), 0, 270);
+
+            // Shoots projectile
+            instantiatedObj.GetComponent<Rigidbody>().AddForce(aimDirection, ForceMode.Impulse);
             ballsRemaining.ChangeBalls(-1);
         }
 
