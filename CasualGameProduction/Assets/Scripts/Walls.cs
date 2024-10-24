@@ -16,7 +16,7 @@ public class Walls : MonoBehaviour
                 // Ensure SoundFXManager.instance is not null
                 if (SoundFXManager.instance != null)
                 {
-                    SoundFXManager.instance.PlayRandomSoundFXClip(bounceSoundClips, transform, 0.1f);
+                    SoundFXManager.instance.PlayRandomSoundFXClip(bounceSoundClips, transform, 0.2f);
                 }
                 else
                 {
