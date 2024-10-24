@@ -609,9 +609,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.06973696, y: 0.079108834, z: -60.019463}
+    m_Target: {x: -6.0322185, y: 21.810024, z: 8.309394}
     speed: 2
-    m_Value: {x: -3.1696875, y: 24.569824, z: -23.430351}
+    m_Value: {x: -6.0322185, y: 21.810024, z: 8.309394}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -657,13 +657,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.4715334, y: -0.52639616, z: 0.46741033, w: 0.5312581}
+    m_Target: {x: 0.017649462, y: -0.7138945, z: 0.018001793, w: 0.699907}
     speed: 2
-    m_Value: {x: -0.019974297, y: 0.6899291, z: -0.019060407, w: -0.72344166}
+    m_Value: {x: 0.015968716, y: -0.71388185, z: 0.016286941, w: 0.6998946}
   m_Size:
-    m_Target: 6.647634
+    m_Target: 31.243265
     speed: 2
-    m_Value: 30.410292
+    m_Value: 32.71546
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -724,10 +724,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      scrollPos: {x: 0, y: 40.400024}
+      m_SelectedIDs: 185f0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 2efbffff
+      m_ExpandedIDs: 2efbffff4a5d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -796,7 +796,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Textures/Feat2
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -804,15 +804,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Textures/Feat2
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\justi\Documents\GitHub\CasualGameProduction\CasualGameProduction
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 17.5}
-    m_SelectedIDs: d85f0000
-    m_LastClickedID: 24536
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: f65e0000
+    m_LastClickedID: 24310
     m_ExpandedIDs: 00000000f65e00000e5f00001c5f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
