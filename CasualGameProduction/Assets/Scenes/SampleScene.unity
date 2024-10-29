@@ -398,7 +398,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 779c38633807f45c99d4db24efdb2fb8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.025
+  m_Volume: 0.214
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -530,6 +530,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: dae7cafd31cf04aba97277ccd563767b, type: 3}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6219e3e2f1a7d4d3c9888de82e0d5fff, type: 3}
     - target: {fileID: 8266731393263835360, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
       propertyPath: m_Name
       value: VirusPeg (4)
@@ -2101,6 +2113,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: dae7cafd31cf04aba97277ccd563767b, type: 3}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6219e3e2f1a7d4d3c9888de82e0d5fff, type: 3}
     - target: {fileID: 8266731393263835360, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
       propertyPath: m_Name
       value: VirusPeg (2)
@@ -2370,6 +2394,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: dae7cafd31cf04aba97277ccd563767b, type: 3}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6219e3e2f1a7d4d3c9888de82e0d5fff, type: 3}
     - target: {fileID: 8266731393263835360, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
       propertyPath: m_Name
       value: VirusPeg (3)
@@ -2991,6 +3027,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: dae7cafd31cf04aba97277ccd563767b, type: 3}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6219e3e2f1a7d4d3c9888de82e0d5fff, type: 3}
     - target: {fileID: 8266731393263835360, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
       propertyPath: m_Name
       value: VirusPeg (1)
@@ -3574,6 +3622,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: dae7cafd31cf04aba97277ccd563767b, type: 3}
+    - target: {fileID: 7006850806470243499, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
+      propertyPath: popSoundClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6219e3e2f1a7d4d3c9888de82e0d5fff, type: 3}
     - target: {fileID: 8266731393263835360, guid: 2509141ff05f4cf46b7a04fb1ce57f5f, type: 3}
       propertyPath: m_Name
       value: VirusPeg
