@@ -6,12 +6,15 @@ using TMPro;
 public class Pop : MonoBehaviour
 {
     private VirusRemaining virusRemaining;
+    [SerializeField] private AudioClip[] popSoundClips;
 
     void Start() {
         GameObject virusTextObject = GameObject.FindWithTag("virusText");
 
         if (virusTextObject != null) {
             virusRemaining = virusTextObject.GetComponent<VirusRemaining>();
+            SoundFXManager.instance.PlayRandomSoundFXClip(popSoundClips, transform, 0.8f);
+
         }
     }
 
