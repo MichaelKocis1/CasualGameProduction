@@ -71,8 +71,6 @@ public class TouchManager : MonoBehaviour
             if (worldPos.y > spawnBarrierLine)
             {
                 syringeSpawnPoint.transform.position = new Vector3(syringeSpawnPoint.transform.position.x, syringeSpawnPoint.transform.position.y, worldPos.z);
-                // would be touching on the syringe to move it.
-                // Will more clearly define these zones later
             }
             else
             {
@@ -88,19 +86,19 @@ public class TouchManager : MonoBehaviour
             GameObject instantiatedObj = GameObject.Instantiate(player, new Vector3(0, syringeSpawnPoint.transform.position.y, syringeSpawnPoint.transform.position.z), Quaternion.identity);
 
             // Calculates aim direction from projectile to touch position
-            Vector3 aimDirection = instantiatedObj.transform.position - worldPos;
-            aimDirection = new Vector3(0, aimDirection.y * -2, aimDirection.z * -2);
+            Vector3 aimDirection = worldPos - instantiatedObj.transform.position;
+            aimDirection = new Vector3(0, aimDirection.y * 1, aimDirection.z * 1);
 
             // Rotate syringe in aim direction
-            //syringeSpawnPoint.transform.rotation = Quaternion.Euler((180 / Mathf.PI * Mathf.Tan(aimDirection.z / aimDirection.y) + 270), 0, 270);
+            syringeSpawnPoint.transform.rotation = Quaternion.Euler((180 / Mathf.PI * Mathf.Atan(aimDirection.z / aimDirection.y)), 0, 0);
+            Debug.Log((180 / Mathf.PI * Mathf.Atan(aimDirection.z / aimDirection.y)));
 
             // Shoots projectile
-            instantiatedObj.GetComponent<Rigidbody>().AddForce(aimDirection, ForceMode.Impulse);
+            instantiatedObj.GetComponent<Rigidbody>().AddForce(aimDirection * 2, ForceMode.Impulse);
             ballsRemaining.ChangeBalls(-1);
         }
 
-        Debug.Log("Screen Position: " + screenPos3D.x + ", " + screenPos3D.y);
-        Debug.Log("World Position: " + worldPos.z + ", " + worldPos.y);
+        // Debug.Log("Screen Position: " + screenPos3D.x + ", " + screenPos3D.y);
+        // Debug.Log("World Position: " + worldPos.z + ", " + worldPos.y);
     }
 }
-
