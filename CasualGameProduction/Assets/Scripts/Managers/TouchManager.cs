@@ -27,24 +27,29 @@ public class TouchManager : MonoBehaviour
     }
 
     void Start() {
+        // Gets the reference for ballsText
         GameObject ballsTextObject = GameObject.FindWithTag("ballsText");
 
         if (ballsTextObject != null) {
             ballsRemaining = ballsTextObject.GetComponent<BallsRemaining>();
         }
 
+        // Sets the height of the barrier line between the zones for moving the syringe and shooting
         spawnBarrierLine = syringeSpawnPoint.transform.position.y;
     }
 
+    // Enables touch controls
     private void OnEnable() {
         touchPressAction.performed += TouchPressed;
     }
-
+    
+    // Disables touch controls
     private void OnDisable() {
         touchPressAction.performed -= TouchPressed;
     }
 
     private void TouchPressed(InputAction.CallbackContext context) {
+        Debug.Log("TouchPress is called");
         if (mainCamera != null)
         {
             screenPos2D = touchPositionAction.ReadValue<Vector2>();
@@ -52,7 +57,31 @@ public class TouchManager : MonoBehaviour
             screenPos3D = new Vector3(screenPos2D.x, screenPos2D.y, camDepth);
             worldPos = mainCamera.ScreenToWorldPoint(screenPos3D);
 
+            if (context.started)
+            {
+                Debug.Log("START");
+            }
+            if (context.performed)
+            {
+                Debug.Log("PERFORMED");
+            }
+            if (context.canceled)
+            {
+                Debug.Log("CANCELED");
+            }
+
             /*
+            context.started // True when the button is initially pressed 
+
+            context.performed // True while if you are holding the button down
+
+            context.canceled // True when the button gets released
+
+            States I want:
+            Above line, below line
+            Active touch (on/off) - disable touch if you slide over boundary line
+
+
             if (above designated height) {
                 move position of syringe launcher only along z axis
             } else if (in stomach range) {
