@@ -11,9 +11,6 @@ public class Restart : MonoBehaviour
 
     GameObject[] ballsOnScreen;
     public int numBallsOnScreen;
-    [SerializeField] GameOverManager gameOverManager;
-    [SerializeField] WinManager winManager;
-    
 
     void Start() {
         GameObject ballsTextObject = GameObject.FindWithTag("ballsText");
@@ -32,10 +29,7 @@ public class Restart : MonoBehaviour
     {
         // If all Virus pegs are removed, restart
         if (virusRemaining.getNumVirusRemaining() == 0) {
-            
-            winManager.SetWin();
-
-            Destroy(gameObject);
+            StartCoroutine(WaitTime());
         }
 
         // If no more balls are remaining...
@@ -47,9 +41,7 @@ public class Restart : MonoBehaviour
 
             if (numBallsOnScreen == 0)
             {
-               gameOverManager.SetGameOver();
-
-               Destroy(gameObject);
+                StartCoroutine(WaitTime());
             }
         }
     }
