@@ -19,6 +19,7 @@ public class TouchManager : MonoBehaviour
 
     public GameObject syringeSpawnPoint;
     public float spawnBarrierLine;
+    Vector3 aimDirection;
 
     private void Awake() {
         playerInput = GetComponent<PlayerInput>();
@@ -68,15 +69,28 @@ public class TouchManager : MonoBehaviour
             }
             */
 
+            // If pressing at or above syringe, move syringe
             if (worldPos.y > spawnBarrierLine)
             {
                 syringeSpawnPoint.transform.position = new Vector3(syringeSpawnPoint.transform.position.x, syringeSpawnPoint.transform.position.y, worldPos.z);
             }
             else
             {
+                // Calculates aim direction from syringeSpawn to touch position
+                aimDirection = worldPos - syringeSpawnPoint.transform.position;
+                aimDirection = new Vector3(0, aimDirection.y * 1, aimDirection.z * 1);
+
+                rotateSyringe();
                 spawnBall();
             }
         }
+    }
+
+    private void rotateSyringe() {
+        // Rotate syringe in aim direction
+        syringeSpawnPoint.transform.rotation = Quaternion.Euler((180 / Mathf.PI * Mathf.Atan(aimDirection.z / aimDirection.y)), 0, 0);
+        
+        // Debug.Log((180 / Mathf.PI * Mathf.Atan(aimDirection.z / aimDirection.y)));
     }
 
     private void spawnBall() {
@@ -84,14 +98,6 @@ public class TouchManager : MonoBehaviour
         {
             // Spawns projectile at tip of syringe
             GameObject instantiatedObj = GameObject.Instantiate(player, new Vector3(0, syringeSpawnPoint.transform.position.y, syringeSpawnPoint.transform.position.z), Quaternion.identity);
-
-            // Calculates aim direction from projectile to touch position
-            Vector3 aimDirection = worldPos - instantiatedObj.transform.position;
-            aimDirection = new Vector3(0, aimDirection.y * 1, aimDirection.z * 1);
-
-            // Rotate syringe in aim direction
-            syringeSpawnPoint.transform.rotation = Quaternion.Euler((180 / Mathf.PI * Mathf.Atan(aimDirection.z / aimDirection.y)), 0, 0);
-            Debug.Log((180 / Mathf.PI * Mathf.Atan(aimDirection.z / aimDirection.y)));
 
             // Shoots projectile
             instantiatedObj.GetComponent<Rigidbody>().AddForce(aimDirection * 2, ForceMode.Impulse);
