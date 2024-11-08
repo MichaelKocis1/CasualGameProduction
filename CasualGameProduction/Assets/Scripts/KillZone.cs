@@ -10,7 +10,7 @@ public class KillZone : MonoBehaviour
         if (other.tag == "Player")
         {
             Destroy(other.gameObject);
-            SoundFXManager.instance.PlayRandomSoundFXClip(killZoneClips, transform, 0.2f);
+            SoundFXManager.instance.PlayRandomSoundFXClip(killZoneClips, transform, 1.0f);
 
         }
     }
