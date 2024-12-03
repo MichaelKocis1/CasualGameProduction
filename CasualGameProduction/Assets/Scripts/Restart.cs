@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Restart : MonoBehaviour
@@ -8,11 +9,14 @@ public class Restart : MonoBehaviour
 
     private GameObject[] ballsOnScreen;
     private const float stuckCheckInterval = 1f; // How often to check if balls are stuck
-    private const float stuckTimeThreshold = 0.4f; // Velocity threshold for determining stuck status
-    private bool gameOverTriggered = false; // Prevents multiple game over triggers
+    private const float stuckTimeThreshold = 0.7f; // Velocity threshold for determining stuck status
+    private const float stationaryDurationThreshold = 1.5f; // Time a ball must be stationary to count as stuck
+    private bool gameOverTriggered = false;
 
     [SerializeField] private GameOverManager gameOverManager;
     [SerializeField] private WinManager winManager;
+
+    private Dictionary<GameObject, float> stationaryTimeTracker = new Dictionary<GameObject, float>();
 
     void Start()
     {
@@ -29,7 +33,7 @@ public class Restart : MonoBehaviour
             virusRemaining = virusTextObject.GetComponent<VirusRemaining>();
         }
 
-        StartCoroutine(CheckBallsStuckRoutine()); // Start the coroutine here
+        StartCoroutine(CheckBallsStuckRoutine());
     }
 
     void Update()
@@ -65,26 +69,52 @@ public class Restart : MonoBehaviour
             {
                 Rigidbody rb = ball.GetComponent<Rigidbody>();
 
-                // Check if any ball is moving above the stuck threshold
-                if (rb != null && rb.velocity.magnitude > stuckTimeThreshold)
+                if (rb != null)
                 {
-                    ballsAreStuck = false;
-                    break;
+                    // Check if the ball is moving
+                    if (rb.velocity.magnitude > stuckTimeThreshold)
+                    {
+                        stationaryTimeTracker[ball] = 0; // Reset stationary timer if moving
+                        ballsAreStuck = false;
+                    }
+                    else
+                    {
+                        // Increment stationary time
+                        if (stationaryTimeTracker.ContainsKey(ball))
+                        {
+                            stationaryTimeTracker[ball] += stuckCheckInterval;
+                        }
+                        else
+                        {
+                            stationaryTimeTracker[ball] = stuckCheckInterval;
+                        }
+
+                        // Check if ball has been stationary for too long
+                        if (stationaryTimeTracker[ball] < stationaryDurationThreshold)
+                        {
+                            ballsAreStuck = false;
+                        }
+                    }
                 }
             }
 
-            if (ballsAreStuck && ballsOnScreen.Length > 0 && !gameOverTriggered)
+            // Only trigger game over if no balls are remaining and balls are stuck
+            if (ballsAreStuck 
+                && ballsOnScreen.Length > 0 
+                && ballsRemaining.getNumBallsRemaining() == 0 
+                && !gameOverTriggered)
             {
+                Debug.Log("Game Over: All balls are stuck, and no balls remaining.");
                 TriggerGameOver();
-                yield break; // Stop checking if game over is triggered
+                yield break;
             }
-        }
+        } // <- Closing brace for the while loop and the CheckBallsStuckRoutine method
     }
 
     private void TriggerGameOver()
     {
         gameOverTriggered = true;
         gameOverManager.SetGameOver();
-        // No scene reload here, game over UI will stay on screen
     }
 }
+
