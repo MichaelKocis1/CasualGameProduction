@@ -21,7 +21,10 @@ public class TouchManager : MonoBehaviour
     public float spawnBarrierLine;
     Vector3 aimDirection;
 
+    [SerializeField] private LineRenderer trajectoryLine;
+
     private void Awake() {
+        trajectoryLine.enabled = false;
         playerInput = GetComponent<PlayerInput>();
         touchPressAction = playerInput.actions.FindAction("TouchPress");
         touchPositionAction = playerInput.actions.FindAction("TouchPosition");
@@ -76,6 +79,14 @@ public class TouchManager : MonoBehaviour
             }
             else
             {
+                if (Input.touchCount > -1){
+                    
+                }
+                trajectoryLine.enabled = true;
+                trajectoryLine.positionCount = 2;
+                trajectoryLine.SetPosition(0, syringeSpawnPoint.transform.position);
+                trajectoryLine.SetPosition(1, worldPos);
+
                 // Calculates aim direction from syringeSpawn to touch position
                 aimDirection = worldPos - syringeSpawnPoint.transform.position;
                 aimDirection = new Vector3(0, aimDirection.y * 1, aimDirection.z * 1);
@@ -84,6 +95,11 @@ public class TouchManager : MonoBehaviour
                 spawnBall();
             }
         }
+    }
+
+    void Update() {
+        //rotateSyringe();
+        Debug.Log(Input.touchCount);
     }
 
     private void rotateSyringe() {

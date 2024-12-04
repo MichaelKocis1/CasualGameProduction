@@ -7,21 +7,21 @@
             "actions": [
                 {
                     "name": "TouchPosition",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "163ef87f-ce86-40f0-ab90-bbc4fb6e0cf4",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
                 {
                     "name": "TouchPress",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "a2209819-a5a4-47ae-a561-5da51749d434",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
