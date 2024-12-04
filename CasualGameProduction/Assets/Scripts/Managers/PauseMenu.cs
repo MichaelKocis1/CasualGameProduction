@@ -17,16 +17,19 @@ public class PauseMenu : MonoBehaviour
 
     public void PlayLevelOne ()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("SampleScene");
     }
 
      public void PlayLevelTwo ()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Pancreas");
     }
 
     public void QuitGame ()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");    
     }
 

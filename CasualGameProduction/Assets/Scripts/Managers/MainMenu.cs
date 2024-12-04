@@ -17,11 +17,13 @@ public class MainMenu : MonoBehaviour
 
     public void PlayLevelOne ()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("SampleScene");
     }
 
      public void PlayLevelTwo ()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Pancreas");
     }
 
