@@ -36965,6 +36965,7 @@ GameObject:
   - component: {fileID: 1845439550}
   - component: {fileID: 1845439553}
   - component: {fileID: 1845439554}
+  - component: {fileID: 1845439555}
   m_Layer: 0
   m_Name: TouchManager
   m_TagString: Untagged
@@ -36979,7 +36980,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845439549}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d55cced475c2f4195b38140b48e1b063, type: 3}
   m_Name: 
@@ -36989,6 +36990,7 @@ MonoBehaviour:
   camDepth: 0
   syringeSpawnPoint: {fileID: 2111181344}
   spawnBarrierLine: 0
+  trajectoryLine: {fileID: 0}
 --- !u!114 &1845439551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37060,6 +37062,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d7aa39f123b44f7ac1de6fe3dcebf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1845439555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845439549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7805f3ad3662c2a44a36662b47dfdf71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5084356389073005123, guid: 479d90fa33771c448ae7cfdb1d09caee, type: 3}
+  mainCamera: {fileID: 0}
+  camDepth: 0
+  syringeSpawnPoint: {fileID: 0}
+  spawnBarrierLine: 0
+  trajectoryLine: {fileID: 0}
 --- !u!1 &1885943086 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7673219482629991519, guid: aff0a6df953366b429586f9427adc22e, type: 3}
