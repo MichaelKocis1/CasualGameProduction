@@ -70,9 +70,6 @@ public class TouchTEST : MonoBehaviour
                     }
                     else
                     {
-                        if (Input.touchCount > -1){
-                            
-                        }
                         trajectoryLine.enabled = true;
                         trajectoryLine.positionCount = 2;
                         trajectoryLine.SetPosition(0, syringeSpawnPoint.transform.position);
@@ -118,9 +115,6 @@ public class TouchTEST : MonoBehaviour
                     }
                     else
                     {
-                        if (Input.touchCount > -1){
-                            
-                        }
                         trajectoryLine.enabled = true;
                         trajectoryLine.positionCount = 2;
                         trajectoryLine.SetPosition(0, syringeSpawnPoint.transform.position);
@@ -131,10 +125,10 @@ public class TouchTEST : MonoBehaviour
                         aimDirection = new Vector3(0, aimDirection.y * 1, aimDirection.z * 1);
 
                         rotateSyringe();
+                        trajectoryLine.enabled = false;
+                        spawnBall();
                     }
                 }
-                trajectoryLine.enabled = false;
-                spawnBall();
             }
             
         }        
