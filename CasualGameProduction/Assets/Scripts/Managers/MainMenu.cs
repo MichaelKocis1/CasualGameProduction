@@ -20,6 +20,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
+     public void PlayLevelTwo ()
+    {
+        SceneManager.LoadScene("Pancreas");
+    }
+
     public void QuitGame ()
     {
         Application.Quit();

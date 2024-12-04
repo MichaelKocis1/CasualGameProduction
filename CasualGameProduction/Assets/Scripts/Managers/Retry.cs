@@ -9,4 +9,9 @@ public class Retry : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void PlayLevelTwo()
+    {
+        SceneManager.LoadScene("Pancreas");
+    }
 }

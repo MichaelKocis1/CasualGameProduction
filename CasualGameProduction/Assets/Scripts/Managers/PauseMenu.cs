@@ -20,6 +20,11 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
+     public void PlayLevelTwo ()
+    {
+        SceneManager.LoadScene("Pancreas");
+    }
+
     public void QuitGame ()
     {
         SceneManager.LoadScene("MainMenu");    

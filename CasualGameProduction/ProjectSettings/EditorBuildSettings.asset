@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Pancreas.unity
+    guid: ff8fcdd983e8c407c8b8b4a4b2039fbd
   m_configObjects: {}
