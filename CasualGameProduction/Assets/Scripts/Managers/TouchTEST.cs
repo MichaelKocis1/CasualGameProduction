@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.iOS;
+using UnityEngine;
 
 public class TouchTEST : MonoBehaviour
 {
